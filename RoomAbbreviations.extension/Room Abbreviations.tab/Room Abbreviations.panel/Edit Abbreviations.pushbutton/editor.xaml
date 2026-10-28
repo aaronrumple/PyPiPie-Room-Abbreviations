@@ -1,0 +1,145 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Room Abbreviations" Width="680" Height="640" MinWidth="560" MinHeight="420"
+        WindowStartupLocation="CenterScreen" ShowInTaskbar="False"
+        Background="{DynamicResource Bg}" Foreground="{DynamicResource Fg}"
+        FontFamily="Segoe UI" FontSize="12">
+  <Window.Resources>
+    <!-- Replaced at runtime to follow Revit's light/dark theme -->
+    <SolidColorBrush x:Key="Bg" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Fg" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="Panel" Color="#F2F2F2"/>
+    <SolidColorBrush x:Key="Line" Color="#C8C8C8"/>
+    <SolidColorBrush x:Key="Alt" Color="#F6F8FB"/>
+    <SolidColorBrush x:Key="Accent" Color="#2D7DD2"/>
+    <SolidColorBrush x:Key="AccentFg" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Muted" Color="#666666"/>
+    <SolidColorBrush x:Key="Warn" Color="#B25E00"/>
+
+    <Style TargetType="Button">
+      <Setter Property="Padding" Value="10,4"/>
+      <Setter Property="Margin" Value="0,0,6,6"/>
+      <Setter Property="Background" Value="{DynamicResource Panel}"/>
+      <Setter Property="Foreground" Value="{DynamicResource Fg}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource Line}"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border x:Name="bd" Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1"
+                    CornerRadius="3" Padding="{TemplateBinding Padding}">
+              <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource Accent}"/>
+              </Trigger>
+              <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="0.5"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Key="Primary" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+      <Setter Property="Background" Value="{DynamicResource Accent}"/>
+      <Setter Property="Foreground" Value="{DynamicResource AccentFg}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource Accent}"/>
+    </Style>
+    <Style TargetType="TextBox">
+      <Setter Property="Background" Value="{DynamicResource Bg}"/>
+      <Setter Property="Foreground" Value="{DynamicResource Fg}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource Line}"/>
+      <Setter Property="CaretBrush" Value="{DynamicResource Fg}"/>
+    </Style>
+    <Style TargetType="CheckBox">
+      <Setter Property="Foreground" Value="{DynamicResource Fg}"/>
+    </Style>
+    <Style TargetType="DataGridColumnHeader">
+      <Setter Property="Background" Value="{DynamicResource Panel}"/>
+      <Setter Property="Foreground" Value="{DynamicResource Fg}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource Line}"/>
+      <Setter Property="BorderThickness" Value="0,0,1,1"/>
+      <Setter Property="Padding" Value="6,4"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+    <Style TargetType="DataGridCell">
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="Padding" Value="4,2"/>
+      <Style.Triggers>
+        <Trigger Property="IsSelected" Value="True">
+          <Setter Property="Background" Value="{DynamicResource Accent}"/>
+          <Setter Property="Foreground" Value="{DynamicResource AccentFg}"/>
+        </Trigger>
+      </Style.Triggers>
+    </Style>
+  </Window.Resources>
+
+  <Grid Margin="14">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <TextBlock Grid.Row="0" TextWrapping="Wrap" Foreground="{DynamicResource Muted}" Margin="0,0,0,10"
+               Text="Room names match ignoring upper/lower case and extra spaces. Leave the abbreviation blank for rooms that have none; rooms whose name is not listed get a blank abbreviation too."/>
+
+    <DockPanel Grid.Row="1" LastChildFill="False">
+      <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Margin="0,0,10,6" VerticalAlignment="Top">
+        <TextBlock Text="Search" VerticalAlignment="Center" Margin="0,0,6,0"/>
+        <TextBox x:Name="search_tb" Width="170" Padding="3,2" VerticalContentAlignment="Center"/>
+      </StackPanel>
+      <WrapPanel DockPanel.Dock="Right">
+        <Button x:Name="add_btn" Content="Add" ToolTip="Add a new room name (it doesn't need to exist in the project yet)"/>
+        <Button x:Name="import_btn" Content="Import…" ToolTip="Merge or replace from a tab-delimited file"/>
+        <Button x:Name="export_btn" Content="Export…" ToolTip="Save the table to a tab-delimited file"/>
+        <Button x:Name="addnames_btn" Content="Add room names from project"
+                ToolTip="Add a row for every room name in the project that is not listed yet"/>
+        <Button x:Name="delete_btn" Content="Delete checked"
+                ToolTip="Delete the checked entries (or the highlighted rows if none are checked)"/>
+      </WrapPanel>
+    </DockPanel>
+
+    <DataGrid x:Name="grid" Grid.Row="2" AutoGenerateColumns="False"
+              CanUserAddRows="True" CanUserDeleteRows="True" SelectionMode="Extended"
+              SelectionUnit="FullRow" HeadersVisibility="Column"
+              Background="{DynamicResource Bg}" Foreground="{DynamicResource Fg}"
+              RowBackground="{DynamicResource Bg}" AlternatingRowBackground="{DynamicResource Alt}"
+              BorderBrush="{DynamicResource Line}"
+              HorizontalGridLinesBrush="{DynamicResource Line}" VerticalGridLinesBrush="{DynamicResource Line}"
+              GridLinesVisibility="Horizontal">
+      <DataGrid.Columns>
+        <DataGridTemplateColumn Width="34" SortMemberPath="Selected" CanUserResize="False">
+          <DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Focusable="False"
+                        IsChecked="{Binding Selected, UpdateSourceTrigger=PropertyChanged}"/>
+            </DataTemplate>
+          </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn Header="Room Name" Width="2*" Binding="{Binding Name}"/>
+        <DataGridTextColumn Header="Abbreviation" Width="*" Binding="{Binding Abbreviation}"/>
+        <DataGridTextColumn Header="Rooms" Width="70" IsReadOnly="True" Binding="{Binding Rooms, Mode=OneWay}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+
+    <TextBlock x:Name="status_tb" Grid.Row="3" Margin="0,8,0,8" TextWrapping="Wrap"
+               Foreground="{DynamicResource Muted}"/>
+
+    <DockPanel Grid.Row="4" LastChildFill="False">
+      <Button x:Name="help_btn" DockPanel.Dock="Left" Content="Help" MinWidth="60" Margin="0,0,12,0"
+              ToolTip="Open the help page (F1)"/>
+      <CheckBox x:Name="update_cb" DockPanel.Dock="Left" IsChecked="True" VerticalAlignment="Center"
+                Content="Update all rooms after saving"/>
+      <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+        <Button x:Name="cancel_btn" Content="Cancel" MinWidth="80" Margin="0,0,6,0"/>
+        <Button x:Name="save_btn" Content="Save" MinWidth="80" Margin="0" Style="{StaticResource Primary}"/>
+      </StackPanel>
+    </DockPanel>
+  </Grid>
+</Window>

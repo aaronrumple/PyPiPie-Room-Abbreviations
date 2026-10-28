@@ -1,0 +1,63 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create a New Room Tag" Width="560" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" ShowInTaskbar="False"
+        Background="{DynamicResource Bg}" Foreground="{DynamicResource Fg}"
+        FontFamily="Segoe UI" FontSize="12">
+  <Window.Resources>
+    <SolidColorBrush x:Key="Bg" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Fg" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="Panel" Color="#F2F2F2"/>
+    <SolidColorBrush x:Key="Line" Color="#C8C8C8"/>
+    <SolidColorBrush x:Key="Accent" Color="#2D7DD2"/>
+    <SolidColorBrush x:Key="AccentFg" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Muted" Color="#666666"/>
+    <Style TargetType="Button">
+      <Setter Property="Padding" Value="12,5"/>
+      <Setter Property="Margin" Value="6,0,0,0"/>
+      <Setter Property="MinWidth" Value="80"/>
+      <Setter Property="Background" Value="{DynamicResource Panel}"/>
+      <Setter Property="Foreground" Value="{DynamicResource Fg}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource Line}"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border x:Name="bd" Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1"
+                    CornerRadius="3" Padding="{TemplateBinding Padding}">
+              <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource Accent}"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Key="Primary" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+      <Setter Property="Background" Value="{DynamicResource Accent}"/>
+      <Setter Property="Foreground" Value="{DynamicResource AccentFg}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource Accent}"/>
+    </Style>
+  </Window.Resources>
+
+  <StackPanel Margin="20,18,20,16">
+    <TextBlock x:Name="title_tb" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,4"/>
+    <TextBlock x:Name="intro_tb" TextWrapping="Wrap" Foreground="{DynamicResource Muted}" Margin="0,0,0,8"/>
+    <!-- Sections (heading + numbered steps) are added from code -->
+    <StackPanel x:Name="sections_sp"/>
+    <Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}" BorderThickness="1"
+            CornerRadius="4" Padding="10,8" Margin="0,14,0,0">
+      <TextBlock x:Name="tip_tb" TextWrapping="Wrap"/>
+    </Border>
+    <DockPanel Margin="0,16,0,0" LastChildFill="False">
+      <Button x:Name="help_btn" DockPanel.Dock="Left" Content="Help" Margin="0" MinWidth="60"/>
+      <Button x:Name="continue_btn" DockPanel.Dock="Right" Content="Continue" IsDefault="True"
+              Style="{StaticResource Primary}"/>
+      <Button x:Name="cancel_btn" DockPanel.Dock="Right" Content="Cancel" IsCancel="True"/>
+    </DockPanel>
+  </StackPanel>
+</Window>

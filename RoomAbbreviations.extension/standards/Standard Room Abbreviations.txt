@@ -1,0 +1,360 @@
+Room Name	Abbreviation
+# Lines starting with # are ignored. Leave the abbreviation blank for rooms that have none.
+#General
+Accessible Restroom	ARR
+Break Room	BRK
+Cafeteria	CAFE
+Conference Room	CONF
+Copy Room	COPY
+Corridor	CORR
+Custodial Room	CUST
+Dining Room	DIN
+Elevator Lobby	ELBY
+Elevator Machine Room	EMR
+Family Restroom	FRR
+First Aid Room	FA
+General Supply	SUP
+Hallway	HALL
+Janitor Closet	JC
+Kitchen	KIT
+Kitchenette	KTTE
+Lactation Room	LACT
+Loading Dock	LDCK
+Lobby	LOB
+Locker Room	LOCK
+Mail Room	MAIL
+Multipurpose Room	MPR
+Prayer Room	PRAY
+Print Room	PRNT
+Public Toilet	PT
+Quiet Room	QUIET
+Receiving	RECV
+Reception	RECP
+Records Storage	RECS
+Recycling Room	RECY
+Restroom	RR
+Security Control Room	SCR
+Security Office	SEC
+Shower Room	SHWR
+Stairwell	STAI
+Storage Room	STOR
+Telephone Room	TEL
+Training Room	TRNG
+Trash Room	TRSH
+Unisex Restroom	URR
+Vestibule	VEST
+Waiting Room	WAIT
+#Office
+Accounting Office	ACCT
+Administrative Office	ADMIN
+Boardroom	BOARD
+Collaboration Area	COLL
+Employee Lounge	ELNG
+Executive Office	EXO
+File Room	FILE
+Focus Room	FOC
+Help Desk	HELP
+Huddle Room	HUD
+Human Resources Office	HR
+Interview Room	INTV
+IT Support Room	ITS
+Manager Office	MGR
+Office	OFF
+Open Office	OO
+Pantry	PAN
+Phone Booth	PHB
+Private Office	OFF
+Project Room	PROJ
+Server Room	SRV
+Shared Office	SOFF
+Small Conference Room	SCON
+Wellness Room	WELL
+Workroom	WRK
+Workstation Area	WSA
+#Medical
+Audiology Booth	AUD
+Blood Bank	BB
+Blood Draw Room	BDR
+Cast Room	CAST
+Chemotherapy Room	CHEMO
+Clean Supply Room	CS
+Clean Utility Room	CU
+Clinical Laboratory	CLAB
+Consultation Room	CONS
+CT Scan Room	CT
+Dental Operatory	DENT
+Dental Sterilization Room	DSTR
+Dialysis Treatment Room	DIAL
+Endoscope Reprocessing Room	ERPR
+Endoscopy Procedure Room	ENDO
+Equipment Storage	EQST
+Exam Room	EXAM
+Eye Exam Room	EYE
+Fluoroscopy Room	FLUOR
+Hazardous Drug Compounding	HDCP
+Histology Laboratory	HIST
+Image Reading Room	READ
+Imaging Control Room	ICR
+Imaging Room	IMG
+Infusion Bay	INFB
+Infusion Room	INF
+Laboratory	LAB
+Linear Accelerator Room	LINAC
+Mammography Room	MAM
+Medical Gas Manifold Room	MGMR
+Medical Gas Storage	MGS
+Medication Preparation Room	MEDP
+Medication Room	MED
+Microbiology Laboratory	MICRO
+Minor Procedure Room	MPRC
+MRI Control Room	MRIC
+MRI Equipment Room	MRIE
+MRI Scan Room	MRI
+Nonhazardous Compounding	NHCP
+Nuclear Medicine Room	NM
+Nurse Station	NS
+Nurse Workroom	NWR
+Observation Room	OBS
+Occupational Therapy Room	OT
+Pathology Laboratory	PATH
+Patient Changing Room	PTCH
+Patient Preparation Room	PREP
+Patient Recovery Room	RECOV
+Patient Shower	PSH
+Patient Toilet	PTOI
+PET Scan Room	PET
+Pharmacy	PHARM
+Pharmacy Ante Room	PHAN
+Pharmacy Cleanroom	PHCR
+Pharmacy Compounding	PHCP
+Pharmacy Dispensing	PHDP
+Phlebotomy Room	PHLEB
+Physical Therapy Room	PTHER
+Point of Care Testing Room	POCT
+Procedure Room	PROC
+Radiation Therapy Vault	RTV
+Radiography Room	XRAY
+Radiology Equipment Room	RER
+Rehabilitation Gym	REHAB
+Respiratory Therapy Room	RT
+Soiled Holding Room	SH
+Soiled Utility Room	SU
+Specimen Collection Room	SPEC
+Specimen Processing Room	SPRP
+Speech Therapy Room	ST
+Stretcher Storage	STRST
+Treatment Room	TRT
+Triage Room	TRI
+Ultrasound Room	US
+Vaccine Storage	VACC
+Wheelchair Storage	WCST
+Wound Care Room	WOUND
+#Hospital
+Airborne Infection Isolation Room	AIIR
+Anesthesia Workroom	ANES
+Autopsy Room	AUTO
+Bed Storage	BEDST
+Behavioral Health Patient Room	BHPR
+Biomedical Equipment Shop	BIOM
+Body Holding Room	BODY
+Case Cart Holding	CCH
+Case Cart Wash	CCW
+Central Sterile Processing	CSP
+Central Supply	CENT
+Command Center	CMD
+Consultation Family Room	FCONS
+Decontamination Area	DECA
+Decontamination Room	DECON
+Delivery Room	DEL
+Double Patient Room	DPR
+Emergency Exam Room	EDEX
+Emergency Resuscitation Room	RESUS
+Emergency Treatment Room	EDTR
+Family Waiting	FWAIT
+Formula Preparation Room	FORM
+Housekeeping Room	HK
+Hybrid Operating Room	HOR
+Intensive Care Unit Room	ICU
+Isolation Patient Room	ISO
+Labor Delivery Recovery Postpartum Room	LDRP
+Labor Delivery Recovery Room	LDR
+Labor Room	LBR
+Linen Storage	LIN
+Morgue	MORG
+Neonatal Intensive Care Room	NICU
+Newborn Exam Room	NBEX
+Nursery	NURS
+Nutrition Room	NUTR
+On Call Room	CALL
+Operating Room	OR
+Operating Room Control	ORC
+Patient Lounge	PLNG
+Patient Room	PAT
+Patient Transport Holding	PTH
+Pediatric Patient Room	PEDS
+Post Anesthesia Care Unit	PACU
+Postpartum Room	PP
+Preoperative Holding	PREOP
+Protective Environment Room	PE
+Recovery Bay	RCB
+Seclusion Room	SECL
+Single Patient Room	SPR
+Soiled Linen Holding	SLH
+Staff Changing Room	SCHG
+Staff Sleep Room	SLP
+Sterile Preparation and Packaging	SPP
+Sterile Storage	SST
+Surgical Instrument Storage	SIS
+Surgical Scrub Area	SCRUB
+Surgical Substerile Room	SUBS
+Trauma Room	TRAU
+#Residential
+Apartment Unit	APT
+Attic	ATT
+Balcony	BAL
+Basement	BSMT
+Bathroom	BATH
+Bedroom	BED
+Breakfast Room	BFAST
+Butler Pantry	BPAN
+Carport	CARP
+Cellar	CELL
+Children Bedroom	CBR
+Closet	CL
+Community Kitchen	CKIT
+Craft Room	CRAFT
+Dining Room	DIN
+Entry	ENT
+Exercise Room	GYM
+Family Room	FAM
+Foyer	FOY
+Game Room	GAME
+Garage	GAR
+Great Room	GREAT
+Guest Bedroom	GBR
+Half Bathroom	HBATH
+Home Office	HOFF
+Home Theater	HTR
+Kitchen	KIT
+Laundry Room	LAUN
+Library	LIB
+Linen Closet	LCL
+Living Room	LIV
+Mail and Package Room	PKG
+Mechanical Closet	MCL
+Media Room	MEDIA
+Mudroom	MUD
+Nursery	NURS
+Pantry	PAN
+Patio	PATIO
+Playroom	PLAY
+Porch	POR
+Powder Room	PDR
+Primary Bathroom	PBATH
+Primary Bedroom	PBR
+Resident Lounge	RLNG
+Residential Common Room	RCR
+Storage Closet	STCL
+Study	STUDY
+Sunroom	SUN
+Utility Room	UTIL
+Walk In Closet	WIC
+Wine Cellar	WINE
+Workshop	SHOP
+#Mechanical
+Air Handling Unit Room	AHU
+Backflow Preventer Room	BFP
+Boiler Room	BLR
+Building Automation Room	BAS
+Chiller Room	CHLR
+Compressed Air Room	CAIR
+Controls Room	CTRL
+Cooling Tower Equipment Room	CTER
+Domestic Hot Water Room	DHW
+Duct Shaft	DSH
+Energy Recovery Room	ERV
+Exhaust Fan Room	EFR
+Fan Room	FAN
+Fire Protection Valve Room	FPV
+Fire Pump Room	FPR
+Fuel Oil Storage Room	FOS
+Fuel Pump Room	FUEL
+Gas Meter Room	GMR
+Geothermal Equipment Room	GEO
+Heat Exchanger Room	HEX
+Heating Plant	HEAT
+Hydronic Pump Room	HPR
+Lift Station	LIFT
+Mechanical Equipment Room	MER
+Mechanical Penthouse	MPH
+Mechanical Room	MECH
+Medical Air Compressor Room	MAC
+Medical Vacuum Pump Room	MVP
+Pipe Chase	PCH
+Plumbing Chase	PLCH
+Plumbing Equipment Room	PLMB
+Pump Room	PUMP
+Rainwater Harvesting Equipment Room	RWH
+Refrigeration Machine Room	RMR
+Sewage Ejector Room	SEW
+Smoke Control Equipment Room	SMK
+Sprinkler Riser Room	SPRR
+Sump Pump Room	SUMP
+Utility Tunnel	UTUN
+Vacuum Pump Room	VAC
+Ventilation Room	VENT
+Water Heater Room	WHR
+Water Meter Room	WMR
+Water Softener Room	WSR
+Water Storage Tank Room	WSTR
+Water Treatment Room	WTR
+#Electrical
+Access Control Equipment Room	ACER
+Audio Visual Equipment Room	AV
+Automatic Transfer Switch Room	ATS
+Battery Room	BATT
+Building Management System Room	BMS
+Cable Vault	CV
+Communications Room	COMM
+Critical Power Room	CPR
+Data Center	DC
+Electrical Closet	ECL
+Electrical Distribution Room	EDR
+Electrical Meter Room	EMET
+Electrical Room	ELEC
+Electrical Shaft	ESH
+Electrical Switchgear Room	SWGR
+Emergency Communications Room	ECR
+Emergency Electrical Room	EER
+Emergency Generator Room	EGEN
+Energy Storage System Room	ESS
+Essential Electrical System Room	EES
+EV Charging Equipment Room	EVCR
+Fire Alarm Control Room	FACR
+Fire Command Center	FCC
+Generator Fuel Room	GFR
+Generator Room	GEN
+Intermediate Distribution Frame Room	IDF
+Inverter Room	INV
+Life Safety Power Room	LSPR
+Lighting Control Room	LCR
+Low Voltage Room	LVR
+Main Distribution Frame Room	MDF
+Main Distribution Room	MDR
+Main Electrical Room	MEL
+Motor Control Center Room	MCC
+Network Equipment Room	NER
+Normal Power Room	NPR
+Nurse Call Equipment Room	NCER
+Public Address Equipment Room	PA
+Radio Equipment Room	RAD
+Security Equipment Room	SER
+Solar Photovoltaic Equipment Room	PV
+Substation Room	SUB
+Technology Room	TECH
+Telecommunications Closet	TCL
+Telecommunications Entrance Facility	TEF
+Telecommunications Room	TR
+Transformer Room	XFMR
+Uninterruptible Power Supply Room	UPS
+
